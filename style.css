@@ -12,11 +12,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding: 0 10px;
     background: #e3f2fd;
 }
 
 .wrapper {
-    width: 780px;
     border-radius: 20px;
     padding: 35px 40px;
     background: #141414;
@@ -124,4 +124,51 @@ header .column span {
     width: 100%;
     font-size: 1.13rem;
     text-align: center;
+}
+
+.piano-keys .key.hide span {
+    display: none;
+}
+
+@media screen and (max-width: 815px) {
+    .wrapper {
+        padding: 25px;
+    }
+    header {
+        flex-direction: column;
+    }
+    header :where(h2, .column) {
+        margin-bottom: 13px;
+    }
+    .volume-slider input {
+        max-width: 100px;
+    }
+    .piano-keys {
+        margin-top: 20px;
+    }
+    .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+        display: none;
+    }
+    .piano-keys .black {
+        height: 100px;
+        width: 40px;
+        margin: 0 -20px 0 -20px;
+    }
+    .piano-keys .white {
+        height: 180px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .piano-keys .key:nth-child(13),   
+    .piano-keys .key:nth-child(13),   
+    .piano-keys .key:nth-child(13),   
+    .piano-keys .key:nth-child(13),   
+    .piano-keys .key:nth-child(13) {
+       display: none;
+    }
+    .piano-keys .white {
+       width: 50px;
+    }   
 }
